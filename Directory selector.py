@@ -1,7 +1,7 @@
 import os
 from tkinter import filedialog
 
-# Directory selector with config persistence and it's to give and output_path, if you want to be a work directory changer just use add after Final_Directory: os.chdir(Final_Directory)
+# Directory selector with config persistence and assigns output_path, if you want a working directory changer just add after Final_Directory: os.chdir(Final_Directory)
 
 def Directory_Selector(): # call the function in a button which command section is: 'command = lambda: Directory_Selector'
     Change_Directory = filedialog.askdirectory(initialdir = Final_Directory, mustexist = True) #open the media explorer to select a directory (return directory)
