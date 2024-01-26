@@ -22,8 +22,9 @@ def Load_Directory():   #loads the last directory assigned
     except:
         if(os.path.exists('filename.txt') == False): #If it doesn't exist then create one by writing inside the .txt the directory of the Desktop
             
-            open('filename.txt', 'w', encoding = 'utf-8').write(os.path.expanduser("~/Desktop")) #Thanks to that person in Stack Overflow. You can change it to the directory in which the .py is in with os.getcwd(), 
+            open('filename.txt', 'w', encoding = 'utf-8').write(os.path.expanduser('~/Desktop')) #Thanks to that person in Stack Overflow. You can change it to the directory in which the .py is in with os.getcwd(), 
                                                                                                 #but it would only be good if you installed the program somewhere that is not program files
+                                                                                                #to change it to the Downloads directory just write '~/Downloads' instead of '~/Desktop'
         
         Path_to_return = open('filename.txt', 'r', encoding = 'utf-8').read() #Now open the filename.txt (read) and return the Directory of the Desktop
         return Path_to_return #return to Final_Directory
