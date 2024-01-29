@@ -18,7 +18,7 @@ def Direct(Change): #random name
 def Load_Directory():   #loads the last directory assigned
     try:
         Directory_existance = open('filename.txt', 'r', encoding = 'utf-8').read() #Try to open the filename.txt, if it doesn't work because there is no filename.txt then go to except
-        return Path_to_return #return to Final_Directory
+        return Directory_existance #return to Final_Directory
     except:
         if(os.path.exists('filename.txt') == False): #If it doesn't exist then create one by writing inside the .txt the directory of the Desktop
             
